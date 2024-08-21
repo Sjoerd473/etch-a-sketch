@@ -1,9 +1,13 @@
 const startButton = document.querySelector('button');
 startButton.addEventListener('click', () => {
-let input =  Number(window.prompt("Type a number between 1 and 100", ""))
-const container = document.querySelector('#container')
-container.replaceChildren()
-generateBackground(input);
+    let input = Number(window.prompt("Type a number between 1 and 100", ""))
+    if (isNaN(input) || input <= 0 || input > 100) {
+        alert("Please give a number between 1 and 100");
+        return;
+    }
+    const container = document.querySelector('#container')
+    container.replaceChildren()
+    generateBackground(input);
 });
 
 document.addEventListener('DOMContentLoaded', generateBackground(16))
