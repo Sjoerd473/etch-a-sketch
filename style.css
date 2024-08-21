@@ -1,14 +1,31 @@
 #container{
     display:flex;
     flex:auto;
-    max-width: 960px;
-    max-height:960px;
+    width: 960px;
+    height: 960px;
+    
     flex-wrap:wrap;
+    justify-content: flex-start;
+    align-content: stretch;
 }
 
-.panel {
-    width:100px;
-    height:100px;
-    background-color: aqua;
+
+
+.column {
+    display:flex;
+    max-width:100%;
+    flex:auto;
+    flex-direction: column;
+}
+.block {
+    display:flex;
+    max-width:100%;
     
+    flex:auto;
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
