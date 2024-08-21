@@ -1,5 +1,10 @@
-//const startButton = document.querySelector('button');
-//startButton.addEventListener('click', generateBackground);
+const startButton = document.querySelector('button');
+startButton.addEventListener('click', () => {
+let input =  Number(window.prompt("Type a number between 1 and 100", ""))
+const container = document.querySelector('#container')
+container.replaceChildren()
+generateBackground(input);
+});
 
 document.addEventListener('DOMContentLoaded', generateBackground(16))
 
