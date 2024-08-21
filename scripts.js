@@ -1,15 +1,17 @@
-const startButton = document.querySelector('button');
-startButton.addEventListener('click', generateBackground);
+//const startButton = document.querySelector('button');
+//startButton.addEventListener('click', generateBackground);
+
+document.addEventListener('DOMContentLoaded', generateBackground(16))
 
 //generates the background divs
-function generateBackground() {
+function generateBackground(number) {
     const container = document.querySelector('#container');
-    for (let i = 0; i < 64; i++) {
+    for (let i = 0; i < number; i++) {
         let column = document.createElement('div')
         column.classList.add('column')
         container.appendChild(column);
 
-        for (let j = 0; j < 64; j++) {
+        for (let j = 0; j < number; j++) {
             let block = document.createElement('div')
             block.classList.add('block')
             block.addEventListener('mouseenter', changeBackground);
